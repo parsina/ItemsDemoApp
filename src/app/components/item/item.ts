@@ -1,35 +1,36 @@
 export class Item{
-  constructor(private _itemId:number, private _itemName:string, private _itemDescription:string, private _itemRefrenceNumber:number){}
+  constructor(private _id:number, private _name:string, private _description:string, private _refrenceNumber:number){}
 
-  get itemId(): number {
-    return this._itemId;
+
+  get id(): number {
+    return this._id;
   }
 
-  set itemId(value: number) {
-    this._itemId = value;
+  set id(value: number) {
+    this._id = value;
   }
 
-  get itemName(): string {
-    return this._itemName;
+  get name(): string {
+    return this._name;
   }
 
-  set itemName(value: string) {
-    this._itemName = value;
+  set name(value: string) {
+    this._name = value;
   }
 
-  get itemDescription(): string {
-    return this._itemDescription;
+  get description(): string {
+    return this._description;
   }
 
-  set itemDescription(value: string) {
-    this._itemDescription = value;
+  set description(value: string) {
+    this._description = value;
   }
 
-  get itemRefrenceNumber(): number {
-    return this._itemRefrenceNumber;
+  get refrenceNumber(): number {
+    return this._refrenceNumber;
   }
 
-  set itemRefrenceNumber(value: number) {
-    this._itemRefrenceNumber = value;
+  set refrenceNumber(value: number) {
+    this._refrenceNumber = value;
   }
 }
