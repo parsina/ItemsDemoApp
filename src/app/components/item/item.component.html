@@ -1,11 +1,14 @@
 <div class="container">
-  <h3 *ngIf="itemIdToUpdate; else create">
-    Update Item for Id: {{itemIdToUpdate}}
-  </h3>
-  <ng-template #create>
-    <h3> Create New Item </h3>
-  </ng-template>
-  <div>
+<div class="card">
+  <div class="card-header">
+    <h3 *ngIf="itemIdToUpdate; else create">
+      Update Item for Id: {{itemIdToUpdate}}
+    </h3>
+    <ng-template #create>
+      <h3> Create New Item </h3>
+    </ng-template>
+  </div>
+  <div class="card-block">
     <form [formGroup]="itemForm" (ngSubmit)="onItemFormSubmit()">
       <div class="form-group row">
         <label for="nameInput" class="col-sm-2 col-form-label col-form-label-lg">Name</label>
@@ -40,11 +43,9 @@
         </div>
       </div>
     </form>
-    <br/>
   </div>
-  <div *ngIf="allItems != null && allItems.length > 0">
-    <h3>Item Details</h3>
-    <table class="table table-active table-hover">
+  <div *ngIf="allItems != null && allItems.length > 0" class="card-block">
+    <table class="table table-active table-hover d-sm-table">
       <thead class="thead-inverse">
       <th style="text-align: center">ID</th>
       <th style="text-align: center">Name</th>
@@ -69,4 +70,5 @@
       </tbody>
     </table>
   </div>
+</div>
 </div>
